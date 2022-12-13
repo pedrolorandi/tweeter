@@ -5,6 +5,7 @@ nav {
   color: #fff;
   padding: 1em 1.5em;
   display: flex;
+  position: fixed;
   justify-content: space-between;
   align-items: flex-end;
 }
