@@ -45,3 +45,7 @@
   font-size: 0.8em;
   padding: 0.3em 0.5em;
 }
+
+.new-tweet form div output.negative {
+  color: #f00;
+}
