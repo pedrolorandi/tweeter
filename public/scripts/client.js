@@ -25,6 +25,18 @@ $(document).ready(function () {
     }  
   }
 
+  // Render the last tweet to append it dynamically
+  const renderLastTweet = function() {
+    $.ajax({
+      type: 'GET',
+      url: '/tweets'
+    }).
+    then(res => {
+      const $tweet = createTweetElement(res[res.length - 1]);
+      $('#tweets-container').append($tweet);
+    })
+  }
+
   // Return an HTML string that represents a tweet with data
   const createTweetElement = function (tweet) {
     return `
@@ -42,7 +54,7 @@ $(document).ready(function () {
       </footer>
     </article>
     `;
-  }  
+  };
 
   // Load the tweets from /tweets
   loadTweets();
@@ -53,10 +65,12 @@ $(document).ready(function () {
     const $textarea     = $(this).find('textarea');
     const textareaValue = $textarea.val();
 
+    // Check if the textarea value is empty or if it has more than 140 characters
     if (textareaValue === '') {
       alert('The tweet can not be empty!');
     } else if (textareaValue.length > 140) {
       alert('The tweet can not have more than 140 characters!');
+      // Else send a GET request to add the lastest tweet to index and clear the form
     } else {
       const $data = $(this).serialize();
 
@@ -64,7 +78,11 @@ $(document).ready(function () {
         type: 'POST',
         url: '/tweets',
         data: $data
-      });
+      })
+      .then(res => {
+        renderLastTweet();
+        $textarea.val('');
+      })
     };
   });
 });
