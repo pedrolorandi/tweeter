@@ -6,6 +6,7 @@
 
 $(document).ready(function () {
 
+  // Fake data taken from initial-tweets.json
   const data = [
     {
       "user": {
@@ -30,6 +31,7 @@ $(document).ready(function () {
     }
   ]
 
+  // Iterate over the tweets, create a tweet element for each tweet and append it to the container
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
@@ -37,6 +39,7 @@ $(document).ready(function () {
     }  
   }
 
+  // Return an HTML string that represents a tweet with data
   const createTweetElement = function (tweet) {
     return `
     <article class="tweet">
@@ -55,5 +58,19 @@ $(document).ready(function () {
     `;
   }
 
+  // Render tweets with fake data
   renderTweets(data);
+
+  // Attach an event handler to the form's submit event, serialize the data and send it in a POST request
+  $('form').submit(function (e) {
+    e.preventDefault();
+
+    const $data = $(this).serialize();
+
+    $.ajax({
+      type: 'POST',
+      url: '/tweets',
+      data: $data
+    })
+  });
 });
