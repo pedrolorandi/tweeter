@@ -50,13 +50,21 @@ $(document).ready(function () {
   // Attach an event handler to the form's submit event, serialize the data and send it in a POST request
   $('form').submit(function (e) {
     e.preventDefault();
+    const $textarea     = $(this).find('textarea');
+    const textareaValue = $textarea.val();
 
-    const $data = $(this).serialize();
+    if (textareaValue === '') {
+      alert('The tweet can not be empty!');
+    } else if (textareaValue.length > 140) {
+      alert('The tweet can not have more than 140 characters!');
+    } else {
+      const $data = $(this).serialize();
 
-    $.ajax({
-      type: 'POST',
-      url: '/tweets',
-      data: $data
-    })
+      $.ajax({
+        type: 'POST',
+        url: '/tweets',
+        data: $data
+      });
+    };
   });
 });
