@@ -6,6 +6,13 @@
 
 $(document).ready(function () {
 
+  // Function to prevent XSS
+  const escape = function (string) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(string));
+    return div.innerHTML;
+  };
+
   // Load tweets from /tweets, and then render them
   const loadTweets = function() {
     $.ajax({
@@ -45,7 +52,7 @@ $(document).ready(function () {
         <img src="${tweet.user.avatars}" alt="User picture">
         <span>${tweet.user.name}</span>
       </header>
-      <p>${tweet.content.text}</p>
+      <p>${escape(tweet.content.text)}</p>
       <footer>
         <span class="date">${timeago.format(tweet.created_at)}</span>
         <a href="#"><i class="fa-solid fa-flag" alt="Flag"></i></a>
