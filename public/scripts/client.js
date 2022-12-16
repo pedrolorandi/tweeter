@@ -71,14 +71,25 @@ $(document).ready(function () {
     e.preventDefault();
     const $textarea     = $(this).find('textarea');
     const textareaValue = $textarea.val();
+    const $errorMessage = $('#error-message');
 
     // Check if the textarea value is empty or if it has more than 140 characters
     if (textareaValue === '') {
-      alert('The tweet can not be empty!');
+      if($errorMessage.is(':visible')) {
+        $errorMessage.html('<i class="fa-solid fa-triangle-exclamation"></i>The tweet cannot be empty!');
+      } else {
+        $errorMessage.slideDown().html('<i class="fa-solid fa-triangle-exclamation"></i>The tweet cannot be empty!');
+      }
     } else if (textareaValue.length > 140) {
-      alert('The tweet can not have more than 140 characters!');
+      if($errorMessage.is(':visible')) {
+        $errorMessage.html('<i class="fa-solid fa-triangle-exclamation"></i>The tweet cannot have more than 140 characters!');
+      } else {
+        $errorMessage.slideDown().html('<i class="fa-solid fa-triangle-exclamation"></i>The tweet cannot have more than 140 characters!');
+      }
       // Else send a GET request to add the lastest tweet to index and clear the form
     } else {
+      $errorMessage.slideUp();
+      const $counter = $textarea.parent().find('.counter');
       const $data = $(this).serialize();
 
       $.ajax({
@@ -89,6 +100,7 @@ $(document).ready(function () {
       .then(res => {
         renderLastTweet();
         $textarea.val('');
+        $counter.text('140');
       })
     };
   });

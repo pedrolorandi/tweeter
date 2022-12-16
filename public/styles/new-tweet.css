@@ -5,6 +5,20 @@
   margin-bottom: 1em;
 }
 
+.new-tweet #error-message {
+  width: 100%;
+  background-color: rgb(255, 100, 100);
+  margin: 0 0 1em 0;
+  padding: 1em;
+  color: white;
+  font-size: 0.75em;
+  display: none;
+}
+
+.new-tweet #error-message i {
+  margin-right: 1em;
+}
+
 .new-tweet label {
   font-weight: bold;
 }
