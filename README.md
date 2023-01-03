@@ -14,22 +14,22 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Main Page"](https://github.com/pedrolorandi/tweeter/blob/master/public/images/Tweeter%20-%20Main%20Page.jpg?raw=true)
+!["Main Page"](https://github.com/pedrolorandi/tweeter/blob/master/docs/Tweeter%20-%20Main%20Page.jpg?raw=true)
 **Main Page**
 
-!["Main Page with empty tweeter error message"](https://github.com/pedrolorandi/tweeter/blob/master/public/images/Tweeter%20-%20Error%201.jpg?raw=true)
+!["Main Page with empty tweeter error message"](https://github.com/pedrolorandi/tweeter/blob/master/docs/Tweeter%20-%20Error%201.jpg?raw=true)
 **Main Page with empty tweeter error message**
 
-!["Main Page with more than 140 characters tweeter error message"](https://github.com/pedrolorandi/tweeter/blob/master/public/images/Tweeter%20-%20Error%202.jpg?raw=true)
+!["Main Page with more than 140 characters tweeter error message"](https://github.com/pedrolorandi/tweeter/blob/master/docs/Tweeter%20-%20Error%202.jpg?raw=true)
 **Main Page with more than 140 characters tweeter error message**
 
-!["Mobile version of the Main Page"](https://github.com/pedrolorandi/tweeter/blob/master/public/images/Tweeter%20-%20Mobile%20-%20Main%20Page.jpg?raw=true)
+!["Mobile version of the Main Page"](https://github.com/pedrolorandi/tweeter/blob/master/docs/Tweeter%20-%20Mobile%20-%20Main%20Page.jpg?raw=true)
 **Mobile version of the Main Page**
 
-!["Mobile version of the Main Page with empty tweeter error message"](https://github.com/pedrolorandi/tweeter/blob/master/public/images/Tweeter%20-%20Mobile%20-%20Error%201.jpg?raw=true)
+!["Mobile version of the Main Page with empty tweeter error message"](https://github.com/pedrolorandi/tweeter/blob/master/docs/Tweeter%20-%20Mobile%20-%20Error%201.jpg?raw=true)
 **Mobile version of the Main Page with empty tweeter error message**
 
-!["Mobile version of the Main Page with more than 140 characters tweeter error message"](https://github.com/pedrolorandi/tweeter/blob/master/public/images/Tweeter%20-%20Mobile%20-%20Error%2002.jpg?raw=true)
+!["Mobile version of the Main Page with more than 140 characters tweeter error message"](https://github.com/pedrolorandi/tweeter/blob/master/docs/Tweeter%20-%20Mobile%20-%20Error%2002.jpg?raw=true)
 **Mobile version of the Main Page with more than 140 characters tweeter error message**
 
 ## Getting Started
