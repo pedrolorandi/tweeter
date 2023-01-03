@@ -29,7 +29,7 @@ This repository is the starter code for the project: Students will fork and clon
 !["Mobile version of the Main Page with empty tweeter message"](https://github.com/pedrolorandi/tweeter/blob/master/public/images/Tweeter%20-%20Mobile%20-%20Error%201.jpg?raw=true)
 **Mobile version of the Main Page with empty tweeter message**
 
-!["Mobile version of the Main Page with more than 140 characters tweeter message"](https://github.com/pedrolorandi/tweeter/blob/master/public/images/Tweeter%20-%20Mobile%20-%20Error%202.jpg?raw=true)
+!["Mobile version of the Main Page with more than 140 characters tweeter message"](https://github.com/pedrolorandi/tweeter/blob/master/public/images/Tweeter%20-%20Mobile%20-%20Error%2002.jpg?raw=true)
 **Mobile version of the Main Page with more than 140 characters tweeter message**
 
 ## Getting Started
